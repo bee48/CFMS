@@ -848,9 +848,6 @@ $bundle = AdminLteAsset::register($this);
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper" style="padding-left: 20px; padding-right: 20px">
 
-	    <?= Breadcrumbs::widget([
-		    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-	    ]) ?>
 	    <?= Alert::widget() ?>
 
         <!-- Content Header (Page header) -->
@@ -862,8 +859,11 @@ $bundle = AdminLteAsset::register($this);
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard v1</li>
+	                        <?= Breadcrumbs::widget([
+		                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+		                        'itemTemplate' => '<li class="breadcrumb-item">{link}</li>', // template for all links
+		                        'activeItemTemplate' => '<li class="breadcrumb-item active">{link}</li>', // template for all links
+	                        ]) ?>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
