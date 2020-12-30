@@ -11,7 +11,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
-AdminLteAsset::register($this);
+$bundle = AdminLteAsset::register($this);
 ?>
 
 <?php $this->beginPage() ?>
@@ -67,7 +67,10 @@ AdminLteAsset::register($this);
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                            <?= Html::img($bundle->baseUrl.'/img/user1-128x128.jpg',[
+                                    'alt' => 'User Avatar',
+                                    'class' => 'img-size-50 mr-3 img-circle',
+                            ])?>
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     Brad Diesel
@@ -83,7 +86,10 @@ AdminLteAsset::register($this);
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+	                        <?= Html::img($bundle->baseUrl.'/img/user8-128x128.jpg',[
+		                        'alt' => 'User Avatar',
+		                        'class' => 'img-size-50 mr-3 img-circle mr-3',
+	                        ])?>
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     John Pierce
@@ -160,7 +166,12 @@ AdminLteAsset::register($this);
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-            <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+	        <?= Html::img($bundle->baseUrl.'/img/AdminLTELogo.png',[
+	                'alt' => 'AdminLTE Logo',
+	                'class' => 'brand-image img-circle elevation-3',
+	                'style' => 'opacity: .8',
+            ])?>
+<!--            <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">-->
             <span class="brand-text font-weight-light">AdminLTE 3</span>
         </a>
 
@@ -169,7 +180,10 @@ AdminLteAsset::register($this);
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+	                <?= Html::img($bundle->baseUrl.'/img/user2-160x160.jpg',[
+		                'alt' => 'User Image',
+		                'class' => 'img-circle elevation-2',
+	                ])?>
                 </div>
                 <div class="info">
                     <a href="#" class="d-block">Alexander Pierce</a>
@@ -833,6 +847,12 @@ AdminLteAsset::register($this);
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper" style="padding-left: 20px; padding-right: 20px">
+
+	    <?= Breadcrumbs::widget([
+		    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+	    ]) ?>
+	    <?= Alert::widget() ?>
+
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
