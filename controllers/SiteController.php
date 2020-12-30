@@ -61,7 +61,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-    	$this->layout = 'adminLte';
         return $this->render('index');
     }
 
@@ -81,7 +80,7 @@ class SiteController extends Controller
             return $this->goBack();
         }
 
-        $model->password = '';
+	    $model->password = '';
         return $this->render('login', [
             'model' => $model,
         ]);
