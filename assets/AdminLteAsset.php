@@ -17,7 +17,8 @@ class AdminLteAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-//        'css/site.css',
+        'css/site.css',
+        'css/custom.css',
 	    'css/adminlte.min.css',
 	    'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback',
 		'plugins/fontawesome-free/css/all.min.css',
