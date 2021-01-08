@@ -74,10 +74,7 @@ $navigationMenu = [];
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-							<?= Html::img( $bundle->baseUrl . '/img/user1-128x128.jpg', [
-								'alt'   => 'User Avatar',
-								'class' => 'img-size-50 mr-3 img-circle',
-							] ) ?>
+                            <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     Brad Diesel
@@ -93,10 +90,7 @@ $navigationMenu = [];
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-							<?= Html::img( $bundle->baseUrl . '/img/user8-128x128.jpg', [
-								'alt'   => 'User Avatar',
-								'class' => 'img-size-50 mr-3 img-circle mr-3',
-							] ) ?>
+                            <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     John Pierce
@@ -112,7 +106,7 @@ $navigationMenu = [];
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                            <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     Nora Silvester
@@ -172,11 +166,11 @@ $navigationMenu = [];
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="<?= Yii::$app->homeUrl ?>" class="brand-link">
+        <a href="<?= Yii::$app->homeUrl ?>" class="brand-link" style="font-size: 1.5em; display: block; line-height: 1.5; padding: .8125em .5em; transition: width .3s ease-in-out; white-space: nowrap;">
 			<?= Html::img( $bundle->baseUrl . '/img/AdminLTELogo.png', [
 				'alt'   => 'AdminLTE Logo',
 				'class' => 'brand-image img-circle elevation-3',
-				'style' => 'opacity: .8',
+				'style' => 'opacity: .8; ',
 			] ) ?>
             <!--            <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">-->
             <span class="brand-text font-weight-light">AdminLTE 3</span>
@@ -190,10 +184,11 @@ $navigationMenu = [];
 					<?= Html::img( $bundle->baseUrl . '/img/user2-160x160.jpg', [
 						'alt'   => 'User Image',
 						'class' => 'img-circle elevation-2',
+                        'style' => 'width: 2.1em;'
 					] ) ?>
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Alexander Pierce</a>
+                    <a href="#" class="d-block layout-username">Alexander Pierce</a>
                 </div>
             </div>
 
