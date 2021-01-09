@@ -42,17 +42,17 @@ $navigationMenu = [];
             <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="index3.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
+<!--            <li class="nav-item d-none d-sm-inline-block">-->
+<!--                <a href="index3.html" class="nav-link">Home</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item d-none d-sm-inline-block">-->
+<!--                <a href="#" class="nav-link">Contact</a>-->
+<!--            </li>-->
         </ul>
 
         <!-- SEARCH FORM -->
-        <form class="form-inline ml-3">
-            <div class="input-group input-group-sm">
+        <!--<form class="form-inline ml-3">
+            <div class="input-group input-group-md">
                 <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
                     <button class="btn btn-navbar" type="submit">
@@ -60,7 +60,7 @@ $navigationMenu = [];
                     </button>
                 </div>
             </div>
-        </form>
+        </form>-->
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
@@ -68,7 +68,7 @@ $navigationMenu = [];
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="far fa-comments"></i>
-                    <span class="badge badge-danger navbar-badge">3</span>
+                    <span class="custom-badge badge-danger navbar-badge">3</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <a href="#" class="dropdown-item">
@@ -126,7 +126,7 @@ $navigationMenu = [];
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="far fa-bell"></i>
-                    <span class="badge badge-warning navbar-badge">15</span>
+                    <span class="custom-badge badge-warning navbar-badge">15</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <span class="dropdown-item dropdown-header">15 Notifications</span>
@@ -166,11 +166,10 @@ $navigationMenu = [];
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="<?= Yii::$app->homeUrl ?>" class="brand-link" style="font-size: 1.5em; display: block; line-height: 1.5; padding: .8125em .5em; transition: width .3s ease-in-out; white-space: nowrap;">
+        <a href="<?= Yii::$app->homeUrl ?>" class="brand-link custom-brand-logo">
 			<?= Html::img( $bundle->baseUrl . '/img/AdminLTELogo.png', [
 				'alt'   => 'AdminLTE Logo',
 				'class' => 'brand-image img-circle elevation-3',
-				'style' => 'opacity: .8; ',
 			] ) ?>
             <!--            <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">-->
             <span class="brand-text font-weight-light">AdminLTE 3</span>
@@ -215,20 +214,20 @@ $navigationMenu = [];
                         'linkOptions' => ['class' => 'nav-link']
 					],
 					[
-						'label'   => 'About',
+						'label'   => '<i class="glyphicon glyphicon-info-sign"></i>&nbsp;&nbsp;About',
 						'url'     => [ '/site/about' ],
 						'options' => [ 'class' => 'nav-item' ],
 						'linkOptions' => ['class' => 'nav-link']
 					],
 					[
-						'label'   => 'Contact',
+						'label'   => '<i class="glyphicon glyphicon-envelope"></i>&nbsp;&nbsp;Contact',
 						'url'     => [ '/site/contact' ],
 						'options' => [ 'class' => 'nav-item' ],
 						'linkOptions' => ['class' => 'nav-link']
 					],
 					Yii::$app->user->isGuest ? (
 					[
-						'label'   => 'Login',
+						'label'   => '<i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Login',
 						'url'     => [ '/site/login' ],
 						'options' => [ 'class' => 'nav-item' ],
 						'linkOptions' => ['class' => 'nav-link']
@@ -237,7 +236,7 @@ $navigationMenu = [];
 						'<li>'
 						. Html::beginForm( [ '/site/logout' ], 'post' )
 						. Html::submitButton(
-							'Logout (' . Yii::$app->user->identity->username . ')',
+							'<i class="glyphicon glyphicon-log-out"></i>&nbsp;&nbsp; Logout (' . Yii::$app->user->identity->username . ')',
 							[ 'class' => 'btn btn-link logout' ]
 						)
 						. Html::endForm()

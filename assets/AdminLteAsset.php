@@ -17,18 +17,17 @@ class AdminLteAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
-        'css/custom.css',
-	    'css/adminlte.min.css',
-	    'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback',
-		'plugins/fontawesome-free/css/all.min.css',
+		'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback',
+	    'plugins/fontawesome-free/css/all.min.css',
 	    'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css',
-	    'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
+//	    'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
 	    'plugins/icheck-bootstrap/icheck-bootstrap.min.css',
 	    'plugins/jqvmap/jqvmap.min.css',
+	    'css/adminlte.min.css',
 	    'plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
 	    'plugins/daterangepicker/daterangepicker.css',
-	    'plugins/summernote/summernote-bs4.min.css'
+	    'plugins/summernote/summernote-bs4.min.css',
+	    'css/custom.css'
     ];
     public $js = [
     	'plugins/jquery/jquery.min.js',
